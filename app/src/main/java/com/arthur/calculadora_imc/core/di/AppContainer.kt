@@ -17,8 +17,8 @@ class AppContainer(context: Context) {
         retrofit.create(Api_De_Imc::class.java)
     }
 
-    val overweightRepository: com.arthur.calculadora_imc.features.calculadora_imc.domain.repositories.OverweightRepository by lazy {
-        _root_ide_package_.com.arthur.calculadora_imc.features.calculadora_imc.data.repositories.OverweightRepositoryImpl(
+    val overweightRepository: OverweightRepository by lazy {
+        OverweightRepositoryImpl(
             api_De_Imc
         )
     }

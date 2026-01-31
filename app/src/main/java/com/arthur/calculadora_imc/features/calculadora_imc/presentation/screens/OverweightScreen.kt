@@ -24,10 +24,10 @@ import com.arthur.calculadora_imc.features.calculadora_imc.presentation.viewmode
 
 @Composable
 fun OverweightScreen(
-    factory: com.arthur.calculadora_imc.features.calculadora_imc.presentation.viewmodels.OverweightViewModelFactory
+    factory: OverweightViewModelFactory
 ) {
 
-    val vm: com.arthur.calculadora_imc.features.calculadora_imc.presentation.viewmodels.OverweightViewModel = viewModel(
+    val vm: OverweightViewModel = viewModel(
         factory = factory
     )
 
@@ -49,7 +49,7 @@ fun OverweightScreen(
         )
         Spacer(modifier = Modifier.height(20.dp))
 
-        _root_ide_package_.com.arthur.calculadora_imc.features.calculadora_imc.presentation.components.OverweightCard(
+        OverweightCard(
             peso = state.peso,
             onPesoChange = { vm.onPesoChange(it) },
             altura = state.altura,

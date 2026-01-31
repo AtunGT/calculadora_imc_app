@@ -9,9 +9,9 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
-class OverweightViewModel(private val useCase: com.arthur.calculadora_imc.features.calculadora_imc.domain.usecases.GetOverweightUseCase) : ViewModel() {
+class OverweightViewModel(private val useCase: GetOverweightUseCase) : ViewModel() {
 
-    private val _uiState = MutableStateFlow(_root_ide_package_.com.arthur.calculadora_imc.features.calculadora_imc.presentation.screens.OverweightUIState())
+    private val _uiState = MutableStateFlow(OverweightUIState())
     val uiState = _uiState.asStateFlow()
 
     fun onPesoChange(valor: String) {

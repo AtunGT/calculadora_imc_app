@@ -7,9 +7,9 @@ import com.arthur.calculadora_imc.features.calculadora_imc.data.datasources.remo
 
 class OverweightRepositoryImpl(
     private val api: Api_De_Imc
-) : com.arthur.calculadora_imc.features.calculadora_imc.domain.repositories.OverweightRepository {
+) : OverweightRepository {
 
-    override suspend fun calcularIMC(peso: Double, altura: Double): com.arthur.calculadora_imc.features.calculadora_imc.domain.entities.Overweight {
+    override suspend fun calcularIMC(peso: Double, altura: Double): Overweight {
         val response = api.getImc(peso, altura)
         return response.toDomain()
     }

@@ -11,5 +11,5 @@ interface Api_De_Imc {
     suspend fun getImc(
         @Path("weight") peso: Double,
         @Path("height") altura: Double
-    ): com.arthur.calculadora_imc.features.calculadora_imc.data.datasources.remote.model.OverweightResponse
+    ): OverweightResponse
 }

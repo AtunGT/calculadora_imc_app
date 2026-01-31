@@ -6,7 +6,7 @@ import com.arthur.calculadora_imc.features.calculadora_imc.domain.usecases.GetOv
 
 
 class OverweightViewModelFactory(
-    private val useCase: com.arthur.calculadora_imc.features.calculadora_imc.domain.usecases.GetOverweightUseCase
+    private val useCase: GetOverweightUseCase
 ) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

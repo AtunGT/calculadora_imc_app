@@ -7,14 +7,14 @@ import com.arthur.calculadora_imc.features.calculadora_imc.presentation.viewmode
 class OverweightModule(
     private val appContainer: AppContainer
 ) {
-    fun provideGetOverweightUseCase(): com.arthur.calculadora_imc.features.calculadora_imc.domain.usecases.GetOverweightUseCase {
-        return _root_ide_package_.com.arthur.calculadora_imc.features.calculadora_imc.domain.usecases.GetOverweightUseCase(
+    fun provideGetOverweightUseCase(): GetOverweightUseCase {
+        return GetOverweightUseCase(
             appContainer.overweightRepository
         )
     }
 
-    fun provideOverweightViewModelFactory(): com.arthur.calculadora_imc.features.calculadora_imc.presentation.viewmodels.OverweightViewModelFactory {
-        return _root_ide_package_.com.arthur.calculadora_imc.features.calculadora_imc.presentation.viewmodels.OverweightViewModelFactory(
+    fun provideOverweightViewModelFactory(): OverweightViewModelFactory {
+        return OverweightViewModelFactory(
             provideGetOverweightUseCase()
         )
     }
